@@ -1,22 +1,48 @@
+
+
+/* Section Background */
 .skills-section {
   padding-top: 80px;
-  background: linear-gradient(120deg, #1d3557, #457b9d); /* Navy to teal gradient */
-  color: #f1faee; /* Soft white text for contrast */
+  background: #1a172e;
+  color: var(--skills-softwhite);
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+/* Section Title */
+h2.section-title,
+h2.section-title.aos-init.aos-animate {
+  color: var(--skills-softwhite);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  margin-bottom: 2.2rem;
+  text-shadow: 0 0 12px var(--skills-navy-light), 0 0 8px var(--skills-accent-2);
 }
 
 /* Cards */
 .card {
   margin-bottom: 2rem;
-  background-color: #f1faee; /* Soft white for contrast */
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--skills-card-bg);
+  border-radius: 1.1rem;
+  box-shadow: var(--skills-shadow);
+  border: var(--skills-glass-border);
+  backdrop-filter: var(--skills-card-blur);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  color: var(--skills-navy);
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  background: rgba(19, 23, 43,);
+  box-shadow: 0 12px 36px rgba(20, 184, 166, 1);
 }
 
-
+/* Card Title */
 .card-title {
-  color: #e63946; /* Coral for standout emphasis */
-  font-weight: 600;
+  color: var(--skills-coral);
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 /* Progress Bars */
@@ -26,60 +52,71 @@
 
 .skill-name {
   font-weight: 500;
-  color: #457b9d; /* Teal for text consistency */
+  color: var(--skills-navy-light);
+  letter-spacing: 0.2px;
 }
 
 .skill-percentage {
-  font-weight: 600;
-  color: #e63946; /* Coral for emphasis */
+  font-weight: 700;
+  color: var(--skills-coral);
+  margin-left: 0.5rem;
 }
 
 .progress {
   height: 10px;
   border-radius: 5px;
-  background-color: #e9ecef; /* Light gray for the background */
+  background: rgba(168, 218, 220, 0.22);
+  margin-top: 0.5rem;
+  overflow: hidden;
 }
 
 .progress-bar {
   border-radius: 5px;
-  background-color: #457b9d; /* Teal for the progress fill */
+  background: linear-gradient(90deg, var(--skills-accent) 40%, var(--skills-accent-2) 100%);
+  transition: width 0.8s cubic-bezier(.4,2,.3,1);
 }
 
 /* Tool Items */
 .tool-item {
   text-align: center;
-  padding: 1rem;
-  border-radius: 8px;
-  background-color: #f1faee; /* Soft white for contrast */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1.2rem;
+  border-radius: 1.1rem;
+  background: var(--skills-card-bg);
+  color: var(--skills-navy-light);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
   height: 100%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle depth */
+  box-shadow: 0 4px 14px rgba(56,189,248,0.10);
+  border: var(--skills-glass-border);
+  backdrop-filter: var(--skills-card-blur);
 }
-
 .tool-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25); /* Enhanced shadow on hover */
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(20, 184, 166, 0.19);
+  background: rgba(56,189,248,0.14);
 }
-
 .tool-item h5 {
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin-bottom: 0;
-  color: #457b9d; /* Teal for text consistency */
+  color: var(--skills-navy-light);
+  font-weight: 600;
+  letter-spacing: 0.2px;
 }
 
 /* Soft Skills */
 .soft-skill {
   padding: 0.75rem 1rem;
-  background-color: rgba(241, 250, 238, 0.2); /* Transparent teal for background */
-  border-radius: 5px;
+  background: rgba(168, 218, 220, 0.13);
+  border-radius: 7px;
   font-weight: 500;
-  color: #1d3557; /* Navy for text */
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  color: var(--skills-navy);
+  transition: transform 0.3s, background 0.3s, color 0.3s;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.1px;
 }
-
 .soft-skill:hover {
-  transform: translateX(5px); /* Horizontal hover movement */
-  background-color: rgba(230, 57, 70, 0.1); /* Coral tint on hover */
+  transform: translateX(7px) scale(1.03);
+  background: rgba(230, 57, 70, 0.13);
+  color: var(--skills-coral);
 }
 
 /* Responsive Styles */
@@ -87,12 +124,10 @@
   .tool-item {
     margin-bottom: 1rem;
   }
-
   .soft-skill {
-    font-size: 0.9rem; /* Adjusted text size for smaller screens */
+    font-size: 0.95rem;
+  }
+  h2.section-title {
+    font-size: 1.3rem;
   }
 }
-h2.section-title.aos-init.aos-animate {
-    color: #f1faee;
-}   
-

@@ -1,101 +1,133 @@
-/* You can add global styles to this file, and also import other style files */
-
-/* Import Bootstrap and FontAwesome */
+/* Import Bootstrap, FontAwesome, AOS */
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import '@fortawesome/fontawesome-free/css/all.min.css';
 @import 'aos/dist/aos.css';
 
+/* Global Theme Colors */
 :root {
-  --primary-color: #1e3a8a;
-  --secondary-color: #2563eb;
-  --accent-color: #60a5fa;
-  --text-color: #333;
-  --light-color: #f8fafc;
-  --dark-color: #0f172a;
-  --gray-color: #94a3b8;
-  --border-color: #e2e8f0;
+  --primary-color: #13172b;        /* Bright Blue */
+  --secondary-color: #5B4D8F;      /* Muted Purple */
+  --accent-color: #7F9CC8;         /* Light Blue Accent */
+  --text-color: #F4F3F3;           /* White */
+  --background-color: #1A172E;     /* Deep Purple */
+  --dark-color: #1A172E;           /* Dark Purple */
+  --gray-color: #7F9CC8;           /* Light Gray */
+  --white-color: #F4F3F3;          /* Soft White */
+
+  /* Card & Glassmorphism */
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --card-blur: blur(12px);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.12);
+  --shadow: 0 10px 40px rgba(75, 135, 212, 0.2);
+
+  /* Section-specific backgrounds */
+  --footer-bg: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  --contact-bg: linear-gradient(120deg, var(--primary-color), var(--dark-color));
+  --projects-bg: linear-gradient(135deg, var(--dark-color), var(--secondary-color));
+  --skills-bg: linear-gradient(120deg, var(--primary-color), var(--gray-color));
 }
 
+/* Reset & Box Sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body */
 body {
   font-family: 'Poppins', sans-serif;
   color: var(--text-color);
-  background-color: var(--light-color);
+  background-color: var(--background-color);
   line-height: 1.6;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--primary-color);
+  color: var(--white-color);
 }
 
+/* Section */
 section {
   padding: 5rem 0;
 }
 
+/* Section Title with underline */
 .section-title {
   text-align: center;
   margin-bottom: 3rem;
   position: relative;
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 2.5rem;
 }
 
 .section-title::after {
   content: '';
   position: absolute;
-  width: 50px;
-  height: 3px;
-  background-color: var(--primary-color);
-  bottom: -10px;
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
 }
 
+/* Buttons */
 .btn-primary {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border: none;
+  color: var(--white-color);
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: var(--secondary-color);
-  border-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(75, 135, 212, 0.4);
 }
 
+/* Cards */
 .card {
-  border-radius: 10px;
+  background: var(--card-bg);
+  backdrop-filter: var(--card-blur);
+  border: var(--glass-border);
+  box-shadow: var(--shadow);
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2rem;
+  color: var(--white-color);
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 50px rgba(75, 135, 212, 0.4);
 }
 
+/* Highlighted Text */
 .highlight {
-  color: var(--secondary-color);
+  color: var(--accent-color);
   font-weight: 600;
 }
 
+/* Gradient Background Utility */
 .bg-primary-gradient {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: white;
+  color: var(--white-color);
 }
 
-/* Custom scrollbar */
+/* Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--light-color);
+  background: var(--background-color);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -105,4 +137,15 @@ section {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--secondary-color);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+  }
 }
