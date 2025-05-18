@@ -1,0 +1,18 @@
+.container {
+  width: min(90%, 1200px);
+  margin-inline: auto;
+}
+
+.flex {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}

@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
   selector: 'app-contact',
 
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss',
+  styleUrl: '../../../styles/components/contact.scss',
   standalone: true,
   imports: [RouterModule],
 })

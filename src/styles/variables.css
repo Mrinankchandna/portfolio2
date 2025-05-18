@@ -1,0 +1,12 @@
+:root {
+  --bg: #121212;
+  --fg: #ffffff;
+  --accent: #03dac6;
+
+  --font-main: 'Poppins', sans-serif;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+}
