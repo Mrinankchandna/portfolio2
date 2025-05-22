@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { CodeCardComponent } from '../../components/code-card/code-card.component';
+import { FakeTerminalComponent } from '../../components/fake-terminal/fake-terminal.component';
 
 @Component({
   selector: 'app-home',
-  
-  templateUrl: './home.component.html',
-  styleUrl: '../../../styles/components/home.scss',
   standalone: true,
-  imports: [RouterModule],
+  templateUrl: './home.component.html',
+  styleUrls: ['../../../styles/components/home.scss'],
+  imports: [RouterModule, CodeCardComponent, FakeTerminalComponent],
 })
 export class HomeComponent {}

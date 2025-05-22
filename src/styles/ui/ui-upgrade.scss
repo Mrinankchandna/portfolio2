@@ -1,0 +1,45 @@
+@import '../variables.scss';
+@import './animations.scss';
+
+.button-modern {
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius);
+  color: var(--bg);
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  display: inline-block;
+
+  &:hover {
+    background: var(--accent-alt);
+    transform: translateY(-3px);
+    color: #fff;
+  }
+}
+
+.button-modern-outline {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  border-radius: var(--radius);
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  display: inline-block;
+
+  &:hover {
+    background: rgba(0, 209, 178, 0.1);
+    color: var(--bg);
+    border-color: var(--accent-alt);
+  }
+}

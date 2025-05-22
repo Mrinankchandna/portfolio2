@@ -55,8 +55,11 @@
               }
             ],
             "styles": [
-              "node_modules/aos/dist/aos.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/styles/variables.scss",
+              "src/styles/ui/animations.scss",
+              "src/styles/ui/ui-upgrade.scss",
+              "node_modules/aos/dist/aos.css"
             ],
             "scripts": [
               "node_modules/aos/dist/aos.js"
@@ -121,8 +124,8 @@
               }
             ],
             "styles": [
-              "node_modules/aos/dist/aos.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/aos/dist/aos.css"
             ],
             "scripts": [
               "node_modules/aos/dist/aos.js"

@@ -5,6 +5,16 @@ import { routes } from './app/app-routing.module';
 import { importProvidersFrom } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
+import AOS from 'aos'; // ✅ only import JS
+
 bootstrapApplication(AppComponent, {
   providers: [provideRouter(routes), importProvidersFrom(HttpClientModule)],
-}).catch((err) => console.error(err));
+})
+  .then(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  })
+  .catch((err) => console.error(err));
