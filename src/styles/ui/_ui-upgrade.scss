@@ -1,5 +1,5 @@
-@import '../variables.scss';
-@import './animations.scss';
+@use "styles/variables" as *;
+@use "styles/ui/animations" as *;
 
 .button-modern {
   padding: 0.75rem 1.5rem;
