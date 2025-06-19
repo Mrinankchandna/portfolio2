@@ -4,10 +4,10 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-about',
- standalone: true,
+  standalone: true,
   imports: [RouterModule],
   templateUrl: './about.component.html',
-   styleUrls: ['../../../styles/components/about.scss']
+  styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
 

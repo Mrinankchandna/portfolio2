@@ -6,8 +6,6 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterModule],
   templateUrl: './skills.component.html',
-  styleUrl: '../../../styles/components/skills.scss'
+  styleUrls: ['./skills.component.scss'] // <-- fix here
 })
-export class SkillsComponent {
-
-}
+export class SkillsComponent {}

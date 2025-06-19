@@ -1,33 +1,31 @@
-<section class="hero bg-primary-gradient text-white min-vh-100 d-flex align-items-center">
+<section class="hero min-vh-100 d-flex align-items-center">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6 content" data-aos="fade-right">
-        <div class="hero-image-wrapper mb-4 text-center">
-          <!-- Replace src with your image path -->
-          <img src="./../../../assets/MyProfilePic.jpg" alt="Mrinank Chandna" class="hero-image" />
-        </div>
-        <h1 class="display-4 fw-bold mb-3">Hi, I'm <span class="text-accent">Mrinank Chandna</span></h1>
-        <h2 class="mb-3">Software Developer</h2>
-        <p class="lead mb-4">Specialized in C#, .NET, Angular, and Web Development</p>
-        <div class="d-flex flex-wrap gap-3">
-          <a [routerLink]="['/contact']" class="btn button-modern">Hire Me</a>
-          <a [routerLink]="['/projects']" class="btn button-modern-outline">View Projects</a>
+    <div class="row align-items-center justify-content-center">
+      <div class="col-lg-7">
+        <div class="card home-card text-center p-4">
+          <div class="hero-image-wrapper mb-4">
+            <!-- Add your profile image here -->
+            <img src="assets/MyProfilePic.jpg" alt="Mrinank Chandna" class="hero-image" />
+          </div>
+          <h1 class="section-title mb-3">
+            Hi, I'm <span class="text-accent">Mrinank Chandna</span>
+          </h1>
+          <h2 class="mb-3">Software Developer</h2>
+          <p class="lead mb-4">
+            Specialized in C#, .NET, Angular, and Web Development
+          </p>
+          <div class="d-flex flex-wrap gap-3 justify-content-center">
+            <a routerLink="/contact" class="btn button-modern">Hire Me</a>
+            <a routerLink="/projects" class="btn button-modern-outline">View Projects</a>
+          </div>
         </div>
       </div>
-
-      <div class="col-lg-6 d-none d-lg-block" data-aos="fade-left">
+      <div class="col-lg-5 d-none d-lg-block">
+        <!-- Optional: Add a terminal or animation here -->
         <div class="text-center p-4">
           <app-fake-terminal></app-fake-terminal>
         </div>
       </div>
-    </div>
-
-    <div class="scroll-down text-center mt-5">
-      <a href="#about" class="mouse-icon">
-        <span class="mouse">
-          <span class="mouse-wheel"></span>
-        </span>
-      </a>
     </div>
   </div>
 </section>

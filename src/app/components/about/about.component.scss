@@ -1,0 +1,58 @@
+.about-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.about-card {
+  margin-bottom: 2rem;
+}
+
+.about-summary {
+  font-size: 1.2rem;
+  color: var(--color-text-main);
+  margin-bottom: 2rem;
+}
+
+.education-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.education-card {
+  background: var(--color-surface);
+  border: var(--glass-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: var(--color-text-main);
+  padding: 1.5rem 1rem;
+  transition: box-shadow 0.3s, background 0.3s;
+}
+
+.edu-icon {
+  font-size: 2rem;
+  color: var(--color-accent);
+}
+
+.edu-detail {
+  color: var(--color-accent);
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 991px) {
+  .about-section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  .about-card {
+    margin-bottom: 1.5rem;
+  }
+  .about-summary {
+    font-size: 1rem;
+  }
+  .education-section {
+    gap: 1rem;
+  }
+}
+

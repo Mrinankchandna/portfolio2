@@ -7,7 +7,7 @@ import { FakeTerminalComponent } from '../../components/fake-terminal/fake-termi
   selector: 'app-home',
   standalone: true,
   templateUrl: './home.component.html',
-  styleUrls: ['../../../styles/components/home.scss'],
+  styleUrls: ['./home.component.scss'],
   imports: [RouterModule, CodeCardComponent, FakeTerminalComponent],
 })
 export class HomeComponent {}

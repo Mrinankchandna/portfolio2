@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-
 @Component({
   selector: 'app-contact',
-
   templateUrl: './contact.component.html',
-  styleUrl: '../../../styles/components/contact.scss',
+  styleUrls: ['./contact.component.scss'], // <-- fix here
   standalone: true,
   imports: [RouterModule],
 })
