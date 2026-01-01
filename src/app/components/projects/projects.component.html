@@ -4,15 +4,15 @@
 
     <!-- Filter Buttons -->
     <div class="filters d-flex justify-content-center mb-4 flex-wrap gap-3">
-      <button class="btn btn-filter active">All</button>
-      <button class="btn btn-filter">Web Development</button>
-      <button class="btn btn-filter">Application</button>
-      <button class="btn btn-filter">Other</button>
+      <button class="btn btn-filter" [class.active]="selectedFilter === 'All'" (click)="filterProjects('All')">All</button>
+      <button class="btn btn-filter" [class.active]="selectedFilter === 'Web Development'" (click)="filterProjects('Web Development')">Web Development</button>
+      <button class="btn btn-filter" [class.active]="selectedFilter === 'Application'" (click)="filterProjects('Application')">Application</button>
+      <button class="btn btn-filter" [class.active]="selectedFilter === 'Other'" (click)="filterProjects('Other')">Other</button>
     </div>
 
     <!-- Projects Grid -->
     <div class="row">
-      <div class="col-md-6 col-lg-4 mb-4" *ngFor="let project of projects">
+      <div class="col-md-6 col-lg-4 mb-4" *ngFor="let project of filteredProjects">
         <div class="card project-card h-100">
           <div class="project-icon mb-3 text-center">
             <i class="fas fa-folder-open fa-2x" style="color: var(--color-accent);"></i>

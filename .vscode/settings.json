@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "serverless-us-central1.sysp0000.db2.skysql.com",
+            "port": 4048,
+            "driver": "MySQL",
+            "name": "Whatsapp DB",
+            "username": "dbpgf04858268",
+            "database": "Mrinank whatsapp db"
+        }
+    ]
+}

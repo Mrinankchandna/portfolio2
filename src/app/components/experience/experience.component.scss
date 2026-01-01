@@ -1,19 +1,8 @@
 .experience-section {
-  background: var(--color-bg-alt);
-  color: var(--color-text-main);
+  background: var(--color-bg);
+  color: var(--text-main);
   padding: 5rem 0 3rem 0;
   min-height: 100vh;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 3rem;
-  color: var(--color-primary);
-  font-size: 2.2rem;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  text-shadow: 0 0 18px var(--color-accent), 0 2px 12px var(--color-primary);
-  position: relative;
 }
 
 .timeline-wrapper {
@@ -27,18 +16,21 @@
   position: absolute;
   left: 50%;
   top: 0;
-  width: 2px;
+  width: 3px;
   height: 100%;
-  background: var(--color-accent, #3ef3ff);
-  opacity: 0.4;
+  background: linear-gradient(to bottom, var(--color-primary), var(--color-accent));
+  opacity: 0.6;
   transform: translateX(-50%);
   z-index: 1;
+  border-radius: 2px;
 }
 
 .timeline-block {
   position: relative;
   width: 100%;
   margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
 }
 
 .timeline-block.right {
@@ -46,172 +38,202 @@
 }
 
 .timeline-content {
-  background: var(--color-surface);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  border: var(--glass-border);
-  color: var(--color-text-main);
-  padding: 2rem 2rem;
-  width: 40%;
+  background: var(--color-elev-2);
+  backdrop-filter: var(--blur-1);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-glass);
+  box-shadow: var(--shadow-1);
+  color: var(--text-main);
+  padding: 1.5rem;
+  width: 45%;
   min-width: 320px;
   max-width: 500px;
   z-index: 2;
+  transition: transform var(--duration-2) var(--ease), box-shadow var(--duration-2) var(--ease);
+}
+
+.timeline-content:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-2);
 }
 
 .timeline-dot {
   position: absolute;
   left: 50%;
-  top: 0;
-  transform: translate(-50%, 0);
-  width: 22px;
-  height: 22px;
-  background: #181c2f;
-  border: 3px solid var(--color-accent, #3ef3ff);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background: var(--color-bg);
+  border: 4px solid var(--color-secondary);
   border-radius: 50%;
-  box-shadow: 0 0 16px 4px var(--color-accent, #3ef3ff);
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  box-shadow: 0 0 12px rgba(20,184,166,0.4);
+  z-index: 3;
 }
 
 .timeline-dot::after {
   content: '';
-  width: 10px;
-  height: 10px;
-  background: var(--color-accent, #3ef3ff);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: var(--color-secondary);
   border-radius: 50%;
-  opacity: 0.8;
-  box-shadow: 0 0 8px var(--color-accent, #3ef3ff);
-  display: block;
+  box-shadow: 0 0 6px var(--color-secondary);
 }
 
 .timeline-block.left .timeline-content {
-  margin-right: auto;
+  margin-right: 2rem;
 }
 
 .timeline-block.right .timeline-content {
-  margin-left: auto;
+  margin-left: 2rem;
 }
 
 .timeline-content h3 {
-  color: var(--color-accent);
-  font-size: 1.3rem;
+  color: var(--color-primary);
+  font-size: var(--fs-600);
   font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
 .timeline-content h4 {
-  color: var(--color-primary);
-  font-size: 1.1rem;
+  color: var(--text-strong);
+  font-size: var(--fs-500);
   font-weight: 600;
-}
-
-.timeline-content .badge {
-  background: var(--color-accent);
-  color: #fff;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  padding: 0.2em 0.8em;
-}
-
-.key-contributions-title {
-  text-align: center;
-  color: #00bfff;
-  font-weight: bold;
-  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-/* Center the list and bullets */
-.key-contributions-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style-position: inside; /* Bullets align with text */
-  padding-left: 0;
-  margin: 0 auto;
+.timeline-content .badge {
+  background: var(--grad-brand);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-400);
+  padding: 0.3rem 0.8rem;
+  font-weight: 500;
 }
 
-.key-contributions-list li {
-  text-align: center;
-  width: 100%;
+.timeline-content .technologies {
+  color: var(--text-muted);
+  font-size: var(--fs-400);
+  margin-bottom: 1rem;
 }
 
-/* Uniform left alignment for all lists inside cards/timeline */
-.card-body ul,
-.card-body ol,
-.timeline-content ul,
-.timeline-content ol {
-  text-align: left;
-  margin: 1rem 0 1rem 2rem; /* 2rem indent for all */
-  padding-left: 0;
-  list-style-position: outside;
-}
-
-.card-body li,
-.timeline-content li {
-  margin-left: 0;
-  padding-left: 0;
+.timeline-content section h5 {
+  color: var(--color-accent);
+  font-size: var(--fs-500);
+  font-weight: 600;
+  margin-bottom: 1rem;
   text-align: left;
 }
 
 .timeline-content ul {
-  padding-left: 1.5rem;
-  margin-bottom: 0;
-  list-style: disc;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .timeline-content ul li {
-  margin-bottom: 0.6rem;
-  color: var(--color-text-main);
-  font-size: 1.05rem;
-  text-align: left;
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-main);
+  font-size: var(--fs-400);
   line-height: 1.6;
 }
 
-.timeline-content ul li::marker {
+.timeline-content ul li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
   color: var(--color-accent);
-  font-size: 1.2em;
   font-weight: bold;
 }
 
-/* Center the "Key Contributions" heading */
-.card-body section h5,
-.timeline-content section h5 {
-  text-align: center;
-  color: #00bfff;
-  font-weight: bold;
-  font-size: 1.3rem;
+/* Projects section */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.card {
+  background: var(--color-elev-2);
+  backdrop-filter: var(--blur-1);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-glass);
+  box-shadow: var(--shadow-1);
+  transition: transform var(--duration-2) var(--ease), box-shadow var(--duration-2) var(--ease);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-2);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  color: var(--text-strong);
+  font-size: var(--fs-600);
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 
-/* Center the list and bullets */
-.card-body section ul,
-.timeline-content section ul {
-  display: inline-block;
-  text-align: left; /* So multi-line bullets align under the text, not the bullet */
-  list-style-position: inside;
-  margin: 0 auto 1.5rem auto;
-  padding-left: 0;
+.card .badge {
+  background: var(--grad-brand);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-400);
+  padding: 0.3rem 0.8rem;
+  font-weight: 500;
 }
 
-/* Center the list container itself */
-.card-body section,
-.timeline-content section {
-  text-align: center;
+.card p {
+  color: var(--text-main);
+  font-size: var(--fs-400);
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
-/* Optional: Make sure li has no extra margin */
-.card-body section ul li,
-.timeline-content section ul li {
-  margin-left: 0;
-  padding-left: 0;
-  max-width: 600px;
+.card section h5 {
+  color: var(--color-accent);
+  font-size: var(--fs-500);
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-@media (max-width: 991px) {
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-main);
+  font-size: var(--fs-400);
+  line-height: 1.6;
+}
+
+.card ul li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
   .timeline-wrapper::before {
-    left: 20px;
+    left: 30px;
   }
   .timeline-block,
   .timeline-block.right {
@@ -219,11 +241,20 @@
     align-items: flex-start;
   }
   .timeline-content {
-    width: 90%;
-    min-width: 0;
-    margin: 0 0 1rem 2.5rem;
+    width: 100%;
+    margin: 0 0 2rem 60px;
   }
   .timeline-dot {
-    margin: 0 0 1rem 0;
+    left: 30px;
+    top: 20px;
+    transform: translateX(-50%);
+  }
+  .timeline-block.left .timeline-content,
+  .timeline-block.right .timeline-content {
+    margin-left: 60px;
+    margin-right: 0;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 }

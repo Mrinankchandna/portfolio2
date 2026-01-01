@@ -1,60 +1,68 @@
 .skills-section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-.card {
-  margin-bottom: 2rem;
+  padding: clamp(2rem, 4vw, 5rem) 0;
 }
 
 .skill-item .progress {
   height: 8px;
-  border-radius: 6px;
-  background: var(--color-bg);
+  border-radius: var(--radius-sm);
+  background: var(--color-glass);
 }
 
 .progress-bar {
-  background: var(--color-accent) !important;
-  border-radius: 6px;
+  background: var(--grad-brand) !important;
+  border-radius: var(--radius-sm);
 }
 
 .tool-item {
-  background: var(--color-surface);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  background: var(--color-elev-2);
+  backdrop-filter: var(--blur-1);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-glass);
+  box-shadow: var(--shadow-1);
   padding: 1.2rem 0.5rem;
   text-align: center;
   margin-bottom: 1rem;
-  color: var(--color-text-main);
-  transition: box-shadow 0.3s, background 0.3s;
+  color: var(--text-main);
+  transition: transform var(--duration-2) var(--ease), box-shadow var(--duration-2) var(--ease);
+}
+
+.tool-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-2);
 }
 
 .tool-item i {
   color: var(--color-accent) !important;
   margin-bottom: 0.5rem;
+  font-size: var(--fs-700);
 }
 
 .soft-skill {
-  background: var(--color-surface);
-  border-radius: var(--radius);
+  background: var(--color-elev-2);
+  backdrop-filter: var(--blur-1);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-glass);
+  box-shadow: var(--shadow-1);
   padding: 0.7rem 1rem;
   margin-bottom: 0.5rem;
-  color: var(--color-text-main);
+  color: var(--text-main);
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  transition: transform var(--duration-2) var(--ease), box-shadow var(--duration-2) var(--ease);
+}
+
+.soft-skill:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-2);
 }
 
 .soft-skill i {
   color: var(--color-accent) !important;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
   .skills-section {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-  .card {
-    margin-bottom: 1.5rem;
+    padding: clamp(1rem, 2vw, 2.5rem) 0;
   }
 }
